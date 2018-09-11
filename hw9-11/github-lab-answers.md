@@ -34,3 +34,10 @@ git checkout branch + name
 
 # Why would you want to use a branch other than the default master?
 Because you don't want to work on the original one and once the changes are submitted you can upload it to the master branch
+
+--
+# Give an example for when you would use git merge and give an example for when it would be better to submit a pull request to have your branch merged
+merge the branch using git merge newbranch. This will merge the newbranch branch into the currently active branch (usually master)
+
+# What command do you use to send all of the work that you've done locally to your remote repository?
+git push origin master
