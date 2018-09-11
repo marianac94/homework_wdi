@@ -6,3 +6,21 @@ git add .
 
 # What command do you use to ask git to move your file from the staging area to the repository?
 git push origin master
+
+--
+# What command do you use to pull any changes from the master repository into your local repository?
+git add .
+git commit -m 'text'
+git push origin master
+
+# What command do you use to unstage a file?
+git reset HEAD
+
+# What command do you use to change your files back to how they were after a commit?
+git checkout
+
+# Why is it important to use -- when changing files back to a previous state?
+For undoing things
+
+# Why might you want to reset your files back to a previous commit?
+git reset
