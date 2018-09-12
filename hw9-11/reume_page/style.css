@@ -57,24 +57,13 @@ h2 {
   text-align: center;
 }
 
-.container {
+.row ::after {
   display: table;
+  content: "";
   clear: both;
 }
 
-.column-left {
-  float: left;
-  position: relative;
-  width: 33%;
-}
-
-.column-center {
-  position: relative;
-  width: 33%;
-}
-
-.column-left {
-  float: right;
-  position: relative;
-  width: 33%;
+.column {
+  float: ;
+  width: 50%;
 }
