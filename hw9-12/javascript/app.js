@@ -81,14 +81,23 @@
 //             console.log(jim);
 
 
-6. Create an array with the members of the ninja turtles (Donatello, Leonardo, Raphael, Michaelangelo)
+// 6. Create an array with the members of the ninja turtles (Donatello, Leonardo, Raphael, Michaelangelo)
+//
+// Use a for loop to call .toUpperCase() on each of them and print out the result.
+//
+// Bonus: Modify the answer you just wrote. Instead of all letters being uppercase, make the letters alternate back and forth between uppercase and lowercase.
+//
+// const ninjaTurtles = ['donatello', 'leonardo', 'raphael', 'michaelangelo'];
+//
+// for(let i = 0; i < ninjaTurtles.length; i++){
+//   ninjaTurtles.map(function(ninjaTurtles) { return ninjaTurtles.toUpperCase()})
+// }
 
-Use a for loop to call .toUpperCase() on each of them and print out the result.
 
-Bonus: Modify the answer you just wrote. Instead of all letters being uppercase, make the letters alternate back and forth between uppercase and lowercase.
+7. Return of the Closets
+Kristyn's left shoe has traveled through time and space and turned up in Thom's accessories drawer! Remove Kristyn's shoe from the array and save it to the variable kristynsShoe. Use that variable to add Kristyn's lost shoe to Thom's accessories array.
 
-const ninjaTurtles = ['donatello', 'leonardo', 'raphael', 'michaelangelo'];
+  console.log(kristynsCloset.shift());
 
-for(let i = 0; i < ninjaTurtles.length; i++){
-  ninjaTurtles.map(function(ninjaTurtles) { return ninjaTurtles.toUpperCase()})
-}
+
+Modify your code to put together 3 separate outfits for Kristyn and Thom. Put the output in a sentence to tell us what we'll be wearing. Mix and match!
