@@ -36,8 +36,8 @@
 //   console.log(i);
 // }
 
-let num = 1;
-while (num <= 91) {
-  console.log(num);
-  num *= 3;
-}
+// let num = 1;
+// while (num <= 91) {
+//   console.log(num);
+//   num *= 3;
+// }
