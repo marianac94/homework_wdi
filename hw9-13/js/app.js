@@ -54,10 +54,14 @@ console.log('yey! its working');
 
 
 
-4. Pythagoras
+// 4. Pythagoras
+//
+// const calculateSide = (sideA, sideB) => {
+//   return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
+// }
+//
+// console.log(calculateSide(8, 6));
 
-const calculateSide = (sideA, sideB) => {
-  return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
-}
 
-console.log(calculateSide(8, 6));
+
+5. 
