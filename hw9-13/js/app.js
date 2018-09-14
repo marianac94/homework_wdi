@@ -16,19 +16,42 @@ console.log('yey! its working');
 
 
 
-2. Palindrome again.
+// 2. Palindrome again.
 
-const checkPalindrome = (word) => {
-  console.log(word.split(" ").reverse().join(" "));
+// const checkPalindrome = (word) => {
+//
+// let reversedWord = word.split("").reverse().join("").toUpperCase();
+//   console.log(reversedWord)
+//     word = word.toUpperCase();
+//       console.log(word)
+//
+//   if(word === reversedWord) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+// }
+//
+// console.log(checkPalindrome("Radar"));
+// console.log(checkPalindrome("Borscht"));
 
-const reversedWord = (word.split(" ").reverse().join(" "));
 
-  if(word === reversedWord) {
-      return true;
-    } else {
-      return false;
-    }
+
+3. Digit Sum
+
+const sumDigits = (n) => {
+  var sum = 0;
+   num = n.toString().split("");
+   console.log(n);
+   console.log(num);
+for(let i = 0; i < num.length; i++){
+   console.log(num[i])
+      sum += Number(num[i])
+  }
+  return sum;
 }
+sumDigits(488);
 
-console.log(checkPalindrome("Radar"));
-console.log(checkPalindrome("Borscht"));
+
+
+4. Pythagoras
