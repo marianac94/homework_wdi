@@ -37,21 +37,27 @@ console.log('yey! its working');
 
 
 
-3. Digit Sum
-
-const sumDigits = (n) => {
-  var sum = 0;
-   num = n.toString().split("");
-   console.log(n);
-   console.log(num);
-for(let i = 0; i < num.length; i++){
-   console.log(num[i])
-      sum += Number(num[i])
-  }
-  return sum;
-}
-sumDigits(488);
+// 3. Digit Sum
+//
+// const sumDigits = (n) => {
+//   var sum = 0;
+//    num = n.toString().split("");
+//    console.log(n);
+//    console.log(num);
+// for(let i = 0; i < num.length; i++){
+//    console.log(num[i])
+//       sum += Number(num[i])
+//   }
+//   return sum;
+// }
+// sumDigits(488);
 
 
 
 4. Pythagoras
+
+const calculateSide = (sideA, sideB) => {
+  return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
+}
+
+console.log(calculateSide(8, 6));
