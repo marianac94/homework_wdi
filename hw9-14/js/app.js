@@ -172,3 +172,95 @@ for (let i = 0; i <= 1000; i++) {
   }
 };
 // You just solved Project Euler problem 1!
+
+
+III. Array & Control Flow
+
+A. Talk about it:
+1. What are the things in an array called?
+--> Arrays contain variables and objects that are called elements. They can store a mixure of data types in a single array.
+
+2. Do Arrays guarantee those things will be in order?
+--> It follows the order you gave to the array, unless you aplly the sort function to the array for the elements to console.log in different and random order.
+
+3. What real-life thing could you model with an array?
+--> It can store a lot of information, for example, if selling clothes, cars, whatever comes in mind, you can store all the information of the element of your choice.
+
+
+B. Easy does it
+1. Create an array that contains three quotes and store it in a variable called quotes.
+const quotes = ['You’ve gotta dance like there’s nobody watching.', 'In three words I can sum up everything I’ve learned about life: It goes on.', 'The mind is everything. What you think you become.'];
+console.log(quotes);
+
+
+C. Accesing elements
+Given the following array const randomThings = [1, 10, "Hello", true]
+1. How do you access the 1st element in the array?
+const randomThings = [1, 10, "Hello", true];
+console.log(randomThings[0]);
+
+2. Change the value of "Hello" to "World".
+const randomThings = [1, 10, "Hello", true];
+randomThings[2] = 'World';
+console.log(randomThings);
+
+3. Check the value of the array to make sure it updated the array. How? Why, yes! console.log();
+console.log(randomThings);
+
+
+D. Change Values
+Given the following array const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]
+1. What would you write to access the 3rd element of the array?
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"];
+console.log(ourClass[2]);
+
+2. Change the value of "Github" to "Octocat"
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"];
+ourClass[4] = 'Octocat';
+console.log(ourClass);
+
+3. Add a new element, "Cloud City" to the array.
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"];
+ourClass[5] = 'Cloud City';
+console.log(ourClass);
+
+
+E. Mix it up
+Given the following array: const myArray = [5, 10, 500, 20]
+Add the string "Egon" to the end of the array. Add another string of your choice to the end of the array.
+const myArray = [5, 10, 500, 20]
+myArray.push('Egon', 'hello');
+console.log(myArray);
+
+Remove the 5 from the beginning of the array.
+const myArray = [5, 10, 500, 20]
+myArray.push('Egon', 'hello');
+myArray.pop(0);
+console.log(myArray);
+
+Add the string "Bob Marley" to the beginning of the array.
+const myArray = [5, 10, 500, 20]
+  myArray.push('Egon', 'hello');
+    myArray.pop(0);
+      myArray.push('Bob Marley');
+
+console.log(myArray);
+
+Remove the string of your choise from the end of the array.
+const myArray = [5, 10, 500, 20]
+  myArray.push('Egon', 'hello');
+    myArray.pop(0);
+      myArray.push('Bob Marley');
+        myArray.pop('hello');
+
+console.log(myArray);
+
+Reverse this array using Array.prototype.reverse(). Did you mutate the array? What does mutate mean? Did the .reverse() method return anything?
+const myArray = [5, 10, 500, 20]
+  myArray.push('Egon', 'hello');
+    myArray.pop(0);
+      myArray.push('Bob Marley');
+        myArray.pop('hello');
+
+const reversed = myArray.reverse();
+console.log(myArray);
