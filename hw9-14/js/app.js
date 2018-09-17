@@ -366,24 +366,90 @@ console.log('weekends rock!');
 // console.log(thomsCloset[1]);
 //
 //
-
-IV. Functions
-
-A. printGreeting
-Do you think you could write a function called printGreeting with a parameter name that returns a greeting with the argument interpolated into the greeting?
-const printGreeting = (name) => {
-  console.log(`Hello there, ${name}`);
+//
+// IV. Functions
+//
+// A. printGreeting
+// Do you think you could write a function called printGreeting with a parameter name that returns a greeting with the argument interpolated into the greeting?
+// const printGreeting = (name) => {
+//   console.log(`Hello there, ${name}`);
+// }
+//
+// printGreeting("Slimer!");
+//
+// You think you could? I think so too. Feel free to skip this problem, because you've already done it. If you've done the problem twice, read entire problems carefully before doing them from now on.
+//
+//
+// B. printCool
+// Write a function printCool that accepts one parameter, name as an argument. The function should print the name and a message saying that that person is cool.
+// const printCool = (name) => {
+//   console.log(`${name} is cool`);
+// }
+//
+// printCool('Mariana');
+//
+//
+// C. calculateCube
+// Write a function calculateCube that takes a single number and prints the volume of a cube made from that number.
+// const calculateCube = (x) => {
+//   console.log(Math.cbrt(x));
+// }
+//
+// calculateCube(5);
+//
+//
+// D. isVowel
+// Write a function isVowel that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. The vowel could be upper or lower case.
+const isVowel = () => {
+  if (`$(var1)`) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 }
 
-printGreeting("Slimer!");
-
-You think you could? I think so too. Feel free to skip this problem, because you've already done it. If you've done the problem twice, read entire problems carefully before doing them from now on.
-
-
-B. printCool
-Write a function printCool that accepts one parameter, name as an argument. The function should print the name and a message saying that that person is cool.
-const printCool = (name) => {
-  console.log(`${name} is cool`);
+isVowel();
+//
+//
+// E. getTwoLengths
+// Write a function getTwoLengths that accepts two parameters (strings). The function should return an array of numbers where each number is the length of the corresponding string.
+const getTwoLengths = (num1, num2) => {
+  console.log();
 }
 
-printCool('Mariana');
+getTwoLengths();
+//
+//
+// F. getMultipleLengths
+// Write a function getMultipleLengths that accepts a single parameter as an argument: an array of strings. The function should return an array of numbers where each number is the length of the corresponding string.
+const getMultipleLengths = () => {
+  console.log();
+}
+getMultipleLengths();
+//
+//
+// G. maxOfThree
+// Define a function maxOfThree that takes three numbers as arguments and returns the largest of them. If all numbers are the same, it doesn't matter which one is returned. If the two largest numbers are the same, one of them should be returned.
+//
+//
+// H. printLongestWord
+// Write a function printLongestWord that accepts a single argument, an array of strings. The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
+//
+//
+// I. transmogrify
+// Write a Javascript function called transmogrify. This function should accept three arguments, which you can assume will be numbers. Your function should return the "transmogrified" result.
+//
+// The transmogrified result of three numbers is the product of the first two numbers, raised to the power of the third number.
+//
+// For example, the transmogrified result of 5, 3, and 2 is (5 times 3) to the power of 2 is 225.
+//
+//
+// J. reverseWordOrder v2
+// Without using .split(), .reverse(), or .join(), write a function reverseWordOrder that accepts a single argument, a string. The function should return a string with the order of the words reversed. Don't worry about punctuation.
+
+// See if you can do it without googling.
+
+// Remember: Jim showed you today that you can index directly into a string:
+//
+//
+//
