@@ -400,15 +400,15 @@ console.log('weekends rock!');
 //
 // D. isVowel
 // Write a function isVowel that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. The vowel could be upper or lower case.
-const isVowel = () => {
-  if (`$(var1)`) {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
-}
-
-isVowel();
+// const isVowel = () => {
+//   if (`$(var1)`) {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// }
+//
+// isVowel();
 //
 //
 // E. getTwoLengths
@@ -452,4 +452,18 @@ getMultipleLengths();
 // Remember: Jim showed you today that you can index directly into a string:
 //
 //
+//
+// OBJECTS
+//
+// A. Make a user object
+// 1. Create an object called user.
+let myObj = user();
+//
+// 2. Write in to the object the key-value pairs for name, email, age, and purchased. Set the value of purchased to an empty array []. Set the other values to whatever you would like.
+let myObj = user();
+  myObj.name = 'mariana',
+  myObj.age = 24,
+  myObj.email = 'marianac94@hotmail.com'
+
+  console.log(myObj);
 //
