@@ -230,9 +230,25 @@ const bondTitles = {};
   }
     console.log(bondTitles);
 
+
 // Create a new array oddBonds, of only the Bond films released on odd-numbered years.
 const oddBonds = {};
-  for (let key in bondFilms) {
-  oddBonds[bondFilms[key].year] = oddBonds;
+  for (let i = 0; i <= bondFilms.length; i++) {
+    if (bondFilms[i].year % 2 !== 0) {
+      console.log(bondFilms[i].year + ' is odd')
+    }
   }
-    console.log(oddBonds);
+
+
+// Determine the total cumulative gross of the Bond franchise, and console.log the result.
+const bondGross = {};
+  for(let i = 0; i < bondGross.length; i++) {
+     item = bondFilms[i];
+     key = Object.keys(item)[0];
+     item = item[key];
+
+     if(!result[key]){
+         result[key] = item;
+     }else{
+         result[key] += item;
+     };
