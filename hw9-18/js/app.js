@@ -1,5 +1,3 @@
-console.log('Hello');
-
 function pokemonGame() {
   const arrayOfPokemon = [{
     name: "Bulbasaur",
@@ -56,7 +54,8 @@ function pokemonGame() {
     name: "Weedle",
     damage: 40
   }];
-
+  let playerScore = 0;
+  let pcScore = 0;
   const dealCards = (array) => {
 
     function getRandomInt(min, max) {
@@ -76,32 +75,56 @@ function pokemonGame() {
     return cardsArray;
   }
 
-  const computerDeals = (array) => {
-    let computerArray = array;
+  let playerArray = dealCards(arrayOfPokemon);
+  let pcArray = dealCards(arrayOfPokemon);
 
+  const dealer = (array) => {
     function getRandomInt(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
     }
-    return computerArray.splice(getRandomInt(0, computerArray.length), 1);
+    let val = array.splice(getRandomInt(0, array.length), 1);
+    return val[0];
   }
 
-  const playerDeals = (array) => {
-    let playerArray = array;
 
-    function getRandomInt(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-    }
-    return playerArray.splice(getRandomInt(0, playerArray.length), 1);
-  }
   const battle = (player, pc) => {
+    for (let i = 0; i < 3; i++) {
+      let playerCard = dealer(playerArray);
+      console.log(playerCard);
+      let pcCard = dealer(pcArray);
+      console.log(pcCard);
+
+      if (playerCard.damage > pcCard.damage) {
+        console.log('player wins this round!');
+        playerScore++;
+        console.log('Player Score: ' + playerScore);
+        console.log('PC Score ' + pcScore);
+      } else if (playerCard.damage === pcCard.damage) {
+        console.log('Tied!');
+        playerScore++;
+        pcScore++;
+        console.log('Player Score: ' + playerScore);
+        console.log('PC Score ' + pcScore);
+
+      } else {
+        console.log('pc wins this round!');
+        pcScore++;
+        console.log('Player Score: ' + playerScore);
+        console.log('PC Score: ' + pcScore);
+      }
+    }
+    if (playerScore > pcScore) {
+      console.log('Player Wins This Game!')
+    } else {
+      console.log('Pc Wins This Game!')
+    }
   }
-  
+  battle(playerArray, pcArray);
 }
 pokemonGame();
+
 // pass in two arrays. 1 for players , other for pc
 // for ( let i = 0; i < 3; i++ ) {
 //    if (playerCardDamage > pcCardDamage) {
