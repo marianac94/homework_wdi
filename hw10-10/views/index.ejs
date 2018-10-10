@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <h1>Pokemon</h1>
+
+  <ul>
+    <% for(let i = 0; i < list.length; i++) { %>
+    <li>
+      <h2>I am <%=list[i].name %><br/> and I look like
+      <img src="<%=list[i].img %>"></h2>
+    </li>
+    <% }%>
+  </ul>
+
+  <nav>
+    <a href="/pokemon/new">Create a Pokemon</a>
+  </nav>
+
+</body>
+
+</html>
