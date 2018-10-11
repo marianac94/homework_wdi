@@ -14,9 +14,11 @@
   <% for(let i = 0; i < list.length; i++) {%>
     <li>
     <h4>
-        I am <%=list[i].name%> and I look like <br/>
-        <img src="<%=list[i].img %>"> <br/>
+        I am <%= list[i].name %> and I look like <br/>
+        <img src="<%= list[i].img %>"> <br/>
+
         <a href="/pokemon/<%=i%>"><button><h5>Click to see me</h5></button></a>
+
         <a href="/pokemon/<%=i%>/edit"><button><h5>Click to edit me</h5></button></a>
       </h4>
     </li>

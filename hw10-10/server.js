@@ -9,8 +9,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 
 
-app.get('/', (req, res) =>{
-    res.render('index.ejs', {pokemon: Pokemon});
+app.get('/pokemon/new', (req, res) => {
+  res.render('new.ejs')
+    Pokemon.push(req.body);
+    res.redirect('/pokemon');
 });
 
 
@@ -21,16 +23,23 @@ app.get('/pokemon', (req, res) => {
 });
 
 
-app.get('/pokemon/new', (req, res) => {
-  res.render('new.ejs')
-    Pokemon.push(req.body);
-    res.redirect('/pokemon');
-});
-
-
 app.get('/pokemon/:index', (req, res) => {
   res.render('show.ejs', {
     pokemon : Pokemon[req.params.index]
+  });
+});
+
+
+// post new pokemon
+app.get('/pokemon/new', (req, res) => {
+  res.render('new.ejs')
+});
+
+app.post('/pokemon', (req, res) => {
+  console.log(req.body, ' new data from pokemon');
+  Pokemon.push(req.body)
+  res.render('index.ejs', {
+    pokemon: Pokemon
   });
 });
 
