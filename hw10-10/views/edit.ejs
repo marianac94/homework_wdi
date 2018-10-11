@@ -8,11 +8,12 @@
 
     <h1>Edit this Pokemon!</h1>
 
-    <form method="POST" action="/pokemon/<%=index%>?_method=PUT">
-      Name: <input type="text" name="name" value="<%=pokemon.name%>"/> <br/>
-      Image: <input type="text" name="image" value="<%=pokemon.img%>"/> <br/>
+  <form method="POST" action="/pokemon/<%=index%>?_method=PUT">
+      Name: <input type="text" name="name" value=""> <br/>
+      Image: <input type="text" name="image" value=""> <br/>
 
-    <button type="submit">Submit Pokemon</button>
+    <input type="submit" name="submit" value="Submit Pokemon">
+  </form>
 
   </body>
 </html>

@@ -28,19 +28,14 @@ app.get('/pokemon/new', (req, res) => {
 });
 
 
-app.get('/pokemon/:index/show', (req, res) => {
-  res.render('show.ejs')
+app.get('/pokemon/:index', (req, res) => {
+  res.render('show.ejs', {
+    pokemon : Pokemon[req.params.index]
+  });
 });
 
 
 // edit the pokemon
-app.post('/pokemon', (req, res) => {
-  console.log(req.params.index, ' index in the route');
-  console.log(req.body, ' this should be the form data');
-
-  res.redirect('/pokemon');
-});
-
 app.get('/pokemon/:index/edit', (req, res) => {
   res.render('edit.ejs', {
     pokemon: Pokemon[req.params.index],
@@ -48,6 +43,13 @@ app.get('/pokemon/:index/edit', (req, res) => {
   });
 });
 
+app.put('/pokemon/:index', (req, res) => {
+  console.log(req.params.index, ' index in the route');
+  console.log(req.body, ' this should be the form data');
+
+  Pokemon[req.body.index] = req.body;
+  res.redirect('/pokemon');
+});
 
 
 
