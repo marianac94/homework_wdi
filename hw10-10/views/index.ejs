@@ -7,22 +7,21 @@
 </head>
 
 <body>
-
   <h1>Pokemon</h1>
+    <a href="/pokemon/new"><button><h4>Create new pokemon</h4></button></a>
 
-  <ul>
-    <% for(let i = 0; i < list.length; i++) { %>
+<ul class="pokemon">
+  <% for(let i = 0; i < list.length; i++) {%>
     <li>
-      <h2>I am <%=list[i].name %><br/> and I look like
-      <img src="<%=list[i].img %>"></h2>
+    <h4>
+        I am <%=list[i].name%> and I look like <br/>
+        <img src="<%=list[i].img %>"> <br/>
+        <a href="/pokemon/<%=i%>/show"><button><h5>Click to see me</h5></button></a>
+        <a href="/pokemon/<%=i%>/edit"><button><h5>Click to edit me</h5></button></a>
+      </h4>
     </li>
-    <% }%>
-  </ul>
-
-  <nav>
-    <a href="/pokemon/new">Create a Pokemon</a>
-  </nav>
-
+  <%}%>
+</ul>
 </body>
 
 </html>

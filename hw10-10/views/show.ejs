@@ -6,9 +6,14 @@
   </head>
   <body>
 
-    <h1>Pokemon</h1>
+    <h1>Selected Pokemon</h1>
 
-    <h3>This is <%=list.name%> pokemon</h3> <img src="<%=list.img%>">
+    <form method="POST" action="/pokemon/<%=index%>?_method=PUT">
+      <h3>
+        This is<%=pokemon.name%>pokemon <br/>
+        <img src="<%=pokemon.img%>">
+      </h3>
+    </form>
 
   </body>
 </html>
