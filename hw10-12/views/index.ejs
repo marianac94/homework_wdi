@@ -13,9 +13,15 @@
 
       <li>
 
-        The <a href="/shoes/<%=shoes[i].index%>"><%= shoes[i].typeOfShoe %>
-        are <%= shoes[i].color %>
-        and it comes in size: <%= shoes[i].size %>
+
+        The <a href="/shoes/<%=i%>"><%= shoes[i].typeOfShoe%>
+        are <%= shoes[i].color%>
+        and it comes in size: <%= shoes[i].size%> <br/>
+
+
+        <form action="/shoes/<%=i%>?_method=DELETE" method="POST">
+          <input type="submit" value="delete">
+        </form>
 
       </li>
 
