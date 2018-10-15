@@ -6,7 +6,7 @@ const methodOverride = require('method-override');
 
 require('./db/db');
 
-const theShoesControllers = require('./controllers/theShoes');
+const shoesControllers = require('./controllers/theShoes');
 
 // require the model from the folder (connecting it)
 // const Shoes = require('./models/shoes');
@@ -14,15 +14,12 @@ const theShoesControllers = require('./controllers/theShoes');
 // middleWare- function that happens in the request from the client on the server
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
-app.use('/shoes', theShoesControllers);
+app.use('/shoes', shoesControllers);
 
 // check if it works
 app.get('/', (req, res) => {
   res.send('This is the living app')
 });
-
-
-
 
 
 

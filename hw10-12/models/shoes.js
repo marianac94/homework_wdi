@@ -20,9 +20,9 @@
 const mongoose = require('mongoose');
 
 const shoeSchema = new mongoose.Schema({
-  color: {type: String, required: true},
-  size: {type: String, required: true},
-  typeOfShoe: {type: String, required: true}
+  colorOfShoe: String,
+  size: String,
+  typeOfShoe: {type: String, require: true}
 });
 
 module.exports = mongoose.model('Shoes', shoeSchema);
