@@ -13,15 +13,17 @@
 
       <li>
 
-
-        The <a href="/shoes/<%=i%>"><%= shoes[i].typeOfShoe%>
+        The <%= shoes[i].typeOfShoe%>
         are <%= shoes[i].color%>
         and it comes in size: <%= shoes[i].size%> <br/>
 
+        <button><a href="/shoes/<%=i%>">More info</button>
 
         <form action="/shoes/<%=i%>?_method=DELETE" method="POST">
           <input type="submit" value="delete">
         </form>
+
+        <a href="/shoes/<%=i%>/edit">Edit the <%=shoes[i].typeOfShoe%></a>
 
       </li>
 
