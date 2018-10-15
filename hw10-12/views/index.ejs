@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Shoe Holics</h1>
+
+      <ul>
+        <% for(let i = 0; i < shoes.length; i++) { %>
+
+      <li>
+
+        The <a href="/shoes/<%=shoes[i].index%>"><%= shoes[i].typeOfShoe %>
+        are <%= shoes[i].color %>
+        and it comes in size: <%= shoes[i].size %>
+
+      </li>
+
+        <% } %>
+      </ul>
+
+      <nav>
+        <a href="/shoes/create">Create a new pair of shoes</a>
+      </nav>
+
+  </body>
+</html>

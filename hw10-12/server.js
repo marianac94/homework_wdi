@@ -11,31 +11,34 @@ app.get('/', (req, res) => {
   res.send('This is the living app')
 });
 
-// display all shoes in the index route
+
+
+// Index route -shows all the shoes
 app.get('/shoes', (req, res) => {
-  res.send(Shoes)
+    res.render('index.ejs', {
+    shoes: Shoes
+  });
 });
 
 // display only one single shoe from the array (display.ejs)
-app.get('/shoes', (req, res) => {
+app.get('/shoes/:index', (req, res) => {
   console.log(req.params);
-
-  res.render('display.ejs', {
+    res.render('display.ejs', {
     shoes: Shoes[req.params.index]
   });
 });
 
-// display a new shoe page route (create.ejs) it has to be above index otherwise its not going to read it
+// display a new shoe page route (create.ejs)
 app.get('/shoes/create', (req, res) => {
   res.render('create.ejs')
 });
 
 app.post('/shoes', (req, res) => {
   console.log(req.body, 'shoes data base live here');
-
-  Shoes.push(req.body);
-  res.redirect('/shoes');
+    Shoes.push(req.body);
+    res.redirect('/shoes');
 });
+
 
 
 
