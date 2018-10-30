@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <h1>Hello <%=user.username%></h1>
+
+    <button><a href="/user">Home</button>
+    <button><a href="photo/new">Add new photo</a></button>
+
+
+  <section>
+    <%=user.info%>
+    <%=user.img%>
+  </section>
+
+      <form action="/user/<%=user.id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Post"/>
+      </form>
+
+      <form action="/user/<%=user.id%>?_method=PUT" method="POST">
+        <input type="submit" value="Edit Post"/>
+      </form>
+
+  </body>
+</html>

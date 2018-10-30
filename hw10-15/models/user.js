@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
+const Photo    = require('./photo');
 
 const userSchema = new mongoose.Schema({
-  username: {type: String, require: true},
-  password: {type: String, require: true},
+  username: String,
+  password: String,
   img: {data: Buffer, contentType: String},
-  info: String
+  info: String,
+  photo: [Photo.schema]
 });
 
 module.exports = mongoose.model('User', userSchema);

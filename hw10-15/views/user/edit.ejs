@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Edit <%=user.username%>'s Info</h1>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/user">User's Index</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+      <textarea name="info"><%=user.info%></textarea><br/>
+      <input type="text" name="img" value="<%=user.img%>"/><br/>
+      <input type="submit" value="Update User"/>
+      </form>
+  </main>
+</body>
+
+</html>

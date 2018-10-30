@@ -9,11 +9,20 @@
     <h1>Meet the Talented Photographers</h1>
 
     <nav>
-      <button><a href="/index">Home</a></button>
-      <button><a href="/new">Add your Info!</a></button>
+      <button><a href="/user">Home</a></button>
+      <button><a href="/user/new">Add your Info!</a></button>
     </nav>
 
-    
+    <main>
+      <ul>
+        <% for(let i = 0; i < user.length; i++) { %>
+
+          <a href="user/<%=user[i].id%>"><%=user[i].username%></a> <br/>
+
+      </ul>
+      <% } %>
+    </main>
+
 
   </body>
 </html>
